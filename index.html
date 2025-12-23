@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أسعار الذهب والعملات - مباشر</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Noto+Sans+Arabic:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "primary-hover": "#d9a50a",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#18181b", // Zinc 900
+                        "surface-light": "#ffffff",
+                        "border-dark": "#27272a", // Zinc 800
+                        "text-muted": "#a1a1aa", // Zinc 400
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Noto Sans Arabic", "sans-serif"],
+                        "arabic": ["Noto Sans Arabic", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #18181b; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46; 
+        }
+        
+        /* Subtle glow animation for live updates simulation */
+        @keyframes pulse-gold {
+            0%, 100% { color: #f2b90d; text-shadow: 0 0 5px rgba(242, 185, 13, 0.2); }
+            50% { color: #fff; text-shadow: 0 0 10px rgba(242, 185, 13, 0.5); }
+        }
+        .live-update {
+            animation: pulse-gold 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-border-dark bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<!-- Logo Area -->
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">currency_exchange</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-none">أسعار الذهب</h1>
+<p class="text-[10px] text-slate-500 dark:text-text-muted font-medium">تحديث لحظي للسوق</p>
+</div>
+</div>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#home">الرئيسية</a>
+<a class="text-sm font-medium text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#currency">أسعار العملات</a>
+<a class="text-sm font-medium text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#gold">أسعار الذهب</a>
+<a class="text-sm font-medium text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#calculator">الحاسبة</a>
+</nav>
+<!-- Mobile Menu Button (Placeholder for functionality) -->
+<button class="md:hidden p-2 text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative py-12 md:py-20 overflow-hidden" id="home">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-500/5 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    مباشر من السوق الرسمي والصاغة
+                </div>
+<h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4 text-slate-900 dark:text-white">
+                    أسعار الذهب والعملات <span class="text-primary">لحظة بلحظة</span>
+</h2>
+<p class="max-w-2xl mx-auto text-lg text-slate-600 dark:text-text-muted mb-8">
+                    تابع أحدث تغيرات أسعار العملات الأجنبية في البنوك المصرية وأسعار الذهب بمختلف العيارات في محلات الصاغة بدقة ومصداقية.
+                </p>
+<!-- Hero Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+<!-- Gold Pound Card -->
+<div class="bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-xl p-5 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="bg-yellow-500/10 p-2.5 rounded-lg text-yellow-500">
+<span class="material-symbols-outlined">monetization_on</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-xs font-medium text-slate-500 dark:text-text-muted">الجنيه الذهب</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white font-display">24,800 ج.م</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>0.5%</span>
+</div>
+</div>
+<!-- Ounce Card -->
+<div class="bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-xl p-5 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="bg-blue-500/10 p-2.5 rounded-lg text-blue-500">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-xs font-medium text-slate-500 dark:text-text-muted">أوقية الذهب عالمياً</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white font-display">2,034 $</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-red-500 bg-red-500/10 px-2 py-1 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<span>0.1%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Currency Section -->
+<section class="py-12 bg-white dark:bg-[#0d0d0d]" id="currency">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="w-1 h-6 bg-primary rounded-full block"></span>
+                            أسعار العملات في السوق الرسمي
+                        </h3>
+<p class="text-sm text-slate-500 dark:text-text-muted mt-1 mr-3">متوسط الأسعار في البنوك المصرية</p>
+</div>
+<button class="text-xs font-medium text-primary hover:text-primary-hover flex items-center gap-1">
+                        تحديث الأسعار
+                        <span class="material-symbols-outlined text-sm">refresh</span>
+</button>
+</div>
+<!-- Currency Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+<!-- USD -->
+<div class="group bg-slate-50 dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-xl p-5 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden font-sans font-bold text-[10px] text-gray-500 dark:text-gray-300">
+                                    USD
+                                </div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">الدولار الأمريكي</h4>
+<span class="text-xs text-slate-500 dark:text-text-muted font-sans">USD/EGP</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-gray-200 dark:border-border-dark pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">شراء</span>
+<span class="font-display font-bold text-lg text-slate-900 dark:text-white">30.85</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">بيع</span>
+<span class="font-display font-bold text-lg text-primary">30.95</span>
+</div>
+</div>
+</div>
+<!-- EUR -->
+<div class="group bg-slate-50 dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-xl p-5 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden font-sans font-bold text-[10px] text-gray-500 dark:text-gray-300">
+                                    EUR
+                                </div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">اليورو الأوروبي</h4>
+<span class="text-xs text-slate-500 dark:text-text-muted font-sans">EUR/EGP</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-gray-200 dark:border-border-dark pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">شراء</span>
+<span class="font-display font-bold text-lg text-slate-900 dark:text-white">33.50</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">بيع</span>
+<span class="font-display font-bold text-lg text-primary">33.70</span>
+</div>
+</div>
+</div>
+<!-- SAR -->
+<div class="group bg-slate-50 dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-xl p-5 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden font-sans font-bold text-[10px] text-gray-500 dark:text-gray-300">
+                                    SAR
+                                </div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">الريال السعودي</h4>
+<span class="text-xs text-slate-500 dark:text-text-muted font-sans">SAR/EGP</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-gray-200 dark:border-border-dark pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">شراء</span>
+<span class="font-display font-bold text-lg text-slate-900 dark:text-white">8.22</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">بيع</span>
+<span class="font-display font-bold text-lg text-primary">8.25</span>
+</div>
+</div>
+</div>
+<!-- AED -->
+<div class="group bg-slate-50 dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-xl p-5 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden font-sans font-bold text-[10px] text-gray-500 dark:text-gray-300">
+                                    AED
+                                </div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">الدرهم الإماراتي</h4>
+<span class="text-xs text-slate-500 dark:text-text-muted font-sans">AED/EGP</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-gray-200 dark:border-border-dark pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">شراء</span>
+<span class="font-display font-bold text-lg text-slate-900 dark:text-white">8.39</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">بيع</span>
+<span class="font-display font-bold text-lg text-primary">8.42</span>
+</div>
+</div>
+</div>
+<!-- GBP -->
+<div class="group bg-slate-50 dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-xl p-5 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden font-sans font-bold text-[10px] text-gray-500 dark:text-gray-300">
+                                    GBP
+                                </div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">الجنيه الإسترليني</h4>
+<span class="text-xs text-slate-500 dark:text-text-muted font-sans">GBP/EGP</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-gray-200 dark:border-border-dark pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">شراء</span>
+<span class="font-display font-bold text-lg text-slate-900 dark:text-white">39.10</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] text-slate-500 dark:text-text-muted mb-0.5">بيع</span>
+<span class="font-display font-bold text-lg text-primary">39.40</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gold Section -->
+<section class="py-12 bg-background-light dark:bg-background-dark" id="gold">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="w-1 h-6 bg-primary rounded-full block"></span>
+                            أسعار الذهب في مصر
+                        </h3>
+<p class="text-sm text-slate-500 dark:text-text-muted mt-1 mr-3">الأسعار غير شاملة المصنعية والدمغة</p>
+</div>
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-dark border border-border-dark shadow-inner">
+<div class="size-2 rounded-full bg-red-500 animate-pulse"></div>
+<span class="text-xs text-gray-300 font-medium">سوق مباشر</span>
+</div>
+</div>
+<!-- Gold Karat Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- 24K -->
+<div class="relative overflow-hidden bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-border-dark p-6">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white">عيار 24</h4>
+<span class="text-xs text-slate-500 dark:text-text-muted">الأنقى والأغلى</span>
+</div>
+<span class="inline-flex items-center justify-center size-8 rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-lg">diamond</span>
+</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-2 border-b border-gray-100 dark:border-border-dark border-dashed">
+<span class="text-sm text-slate-500 dark:text-text-muted">سعر الشراء</span>
+<span class="font-display font-bold text-xl text-slate-900 dark:text-white">3,540</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-slate-500 dark:text-text-muted">سعر البيع</span>
+<span class="font-display font-bold text-xl text-primary">3,580</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 21K (Highlighted) -->
+<div class="relative overflow-hidden bg-surface-dark border border-primary/40 rounded-xl p-6 shadow-[0_0_15px_rgba(242,185,13,0.1)]">
+<div class="absolute top-0 right-0 w-full h-1 bg-gradient-to-l from-primary via-primary/50 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="text-xl font-bold text-white">عيار 21</h4>
+<span class="text-xs text-primary/80 font-medium">الأكثر تداولاً</span>
+</div>
+<span class="inline-flex items-center justify-center size-8 rounded bg-primary text-black">
+<span class="material-symbols-outlined text-lg">stars</span>
+</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-2 border-b border-gray-700 border-dashed">
+<span class="text-sm text-gray-400">سعر الشراء</span>
+<span class="font-display font-bold text-2xl text-white">3,100</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-400">سعر البيع</span>
+<span class="font-display font-bold text-2xl text-primary live-update">3,130</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 18K -->
+<div class="relative overflow-hidden bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-border-dark p-6">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white">عيار 18</h4>
+<span class="text-xs text-slate-500 dark:text-text-muted">الاقتصادي والعملي</span>
+</div>
+<span class="inline-flex items-center justify-center size-8 rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-lg">savings</span>
+</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-2 border-b border-gray-100 dark:border-border-dark border-dashed">
+<span class="text-sm text-slate-500 dark:text-text-muted">سعر الشراء</span>
+<span class="font-display font-bold text-xl text-slate-900 dark:text-white">2,657</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-slate-500 dark:text-text-muted">سعر البيع</span>
+<span class="font-display font-bold text-xl text-primary">2,685</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 14K -->
+<div class="relative overflow-hidden bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-border-dark p-6">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gray-500/5 rounded-bl-full -mr-4 -mt-4"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white">عيار 14</h4>
+<span class="text-xs text-slate-500 dark:text-text-muted">الحد الأدنى للاستثمار</span>
+</div>
+<span class="inline-flex items-center justify-center size-8 rounded bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-lg">equalizer</span>
+</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-2 border-b border-gray-100 dark:border-border-dark border-dashed">
+<span class="text-sm text-slate-500 dark:text-text-muted">سعر الشراء</span>
+<span class="font-display font-bold text-xl text-slate-900 dark:text-white">2,066</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-slate-500 dark:text-text-muted">سعر البيع</span>
+<span class="font-display font-bold text-xl text-primary">2,090</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Calculator Section -->
+<section class="py-16 bg-white dark:bg-[#0d0d0d]" id="calculator">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-slate-50 dark:bg-surface-dark rounded-2xl border border-gray-200 dark:border-border-dark p-8 md:p-12 shadow-lg relative overflow-hidden">
+<!-- Abstract geometric background -->
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(#f2b90d 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10 text-center mb-10">
+<div class="inline-flex items-center justify-center p-3 bg-primary/10 rounded-xl text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">calculate</span>
+</div>
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">حاسبة قيمة الذهب</h2>
+<p class="text-slate-500 dark:text-text-muted">احسب قيمة الذهب التقريبية بناءً على السعر الحالي للجرام (بدون المصنعية)</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-5">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2" for="karat">عيار الذهب</label>
+<div class="relative">
+<select class="w-full bg-white dark:bg-black border border-gray-300 dark:border-border-dark text-slate-900 dark:text-white rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary focus:border-primary appearance-none cursor-pointer" id="karat">
+<option value="24">عيار 24 (3,580 ج.م/جم)</option>
+<option selected="" value="21">عيار 21 (3,130 ج.م/جم)</option>
+<option value="18">عيار 18 (2,685 ج.م/جم)</option>
+<option value="14">عيار 14 (2,090 ج.م/جم)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-500">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2" for="weight">الوزن (جرام)</label>
+<div class="relative">
+<input class="w-full bg-white dark:bg-black border border-gray-300 dark:border-border-dark text-slate-900 dark:text-white rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary focus:border-primary" id="weight" placeholder="مثال: 10" type="number"/>
+<div class="absolute inset-y-0 left-0 flex items-center px-4 text-gray-500 text-sm font-medium">
+                                        جم
+                                    </div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary-hover text-black font-bold py-3.5 px-6 rounded-lg transition duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">payments</span>
+                                أحسب القيمة
+                            </button>
+</div>
+<!-- Result Card -->
+<div class="bg-white dark:bg-black border border-gray-200 dark:border-border-dark rounded-xl p-6 md:p-8 flex flex-col items-center justify-center text-center h-full min-h-[220px]">
+<span class="text-sm font-medium text-slate-500 dark:text-text-muted mb-2">القيمة التقديرية</span>
+<div class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white font-display tracking-tight mb-2">
+<span class="text-primary">0</span> <span class="text-xl text-slate-400 font-normal">ج.م</span>
+</div>
+<p class="text-xs text-slate-400 dark:text-gray-600 mt-4 max-w-[200px]">السعر تقريبي ولا يشمل المصنعية والدمغة التي تختلف من تاجر لآخر</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dark border-t border-border-dark py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">currency_exchange</span>
+<span class="text-lg font-bold text-white">أسعار الذهب</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+<a class="hover:text-primary transition-colors" href="#">سياسة الخصوصية</a>
+<a class="hover:text-primary transition-colors" href="#">شروط الاستخدام</a>
+<a class="hover:text-primary transition-colors" href="#">عن الموقع</a>
+</div>
+<div class="text-sm text-gray-500">
+                    © 2024 جميع الحقوق محفوظة
+                </div>
+</div>
+<div class="mt-8 pt-8 border-t border-border-dark/50 text-center">
+<p class="text-xs text-gray-600 max-w-2xl mx-auto">
+                    تنويه: البيانات المعروضة في هذا الموقع للأغراض المعلوماتية فقط، ولا تعتبر نصيحة استثمارية. الأسعار تتغير بشكل لحظي بناءً على السوق العالمي والسوق المحلي.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
